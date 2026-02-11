@@ -28,17 +28,19 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
     width: 300px;
-    height: 510px;
+    height: 520px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    /* Transform  e transitions assim devem sempre ser a ultima coisa! */
+    
 }
 
 section#login > div#imagem{
@@ -60,21 +62,51 @@ div#formulario > h1, p{
 
 div#formulario > p {
     font-size: 0.8em;
+    margin: 10px 0px;
 }
 
 form > div.campo{
     background-color: #5f2c82;
+    border: 2px solid #5f2c5f;
     width: 100%;
     display: block;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
-    color: white;
 }
 
 form label{
     font-size: 0.8em;
     display: none;
+}
+
+form > div.campo > span{
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #71ccc9;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    transform: translateY(-9px); 
+    /* Transform devem sempre ser a ultima linha! */
+}
+
+div.campo > input:hover{
+    background-color: #b0faf7;
+    transition-duration: .2s;
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+    border: none;
 }
 
 form > input[type=submit]{

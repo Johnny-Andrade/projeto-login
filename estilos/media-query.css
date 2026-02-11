@@ -9,6 +9,7 @@
 
     section#login{
         width: 80vw;
+        height: 310px;
     }
     section#login > div#imagem{
         float: left;
@@ -22,11 +23,14 @@
 }
 
 @media screen and (min-width: 992px){
+    /* Grandes Telas */
+
     body{
         background-image: linear-gradient(to top, #49a09d, #5f2c82);
     }
     section#login{
         width: 965px;
+        height: 350px;
     }
     section#login > div#imagem{
         float: right;
